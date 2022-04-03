@@ -1,10 +1,8 @@
-version: "3.8"
+version: "3.3"
 services:
   mlnhiicc:
     image: mlnhiicc
     build: .
     volumes:
       - "/run/pcscd:/var/run/pcscd"
-    ports:
-      - "127.0.0.1:7777:7777"
-      - "127.0.0.1:61161:61161"
+    network_mode: "host"
